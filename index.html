@@ -16,16 +16,30 @@
     <title>Interactive pricing component</title>
   </head>
   <body>
+    <header>
+      <h1>Simple, traffic-based pricing</h1>
+      <p class="main-p">
+        Sign-up for our 30-day trial. No credit card required.
+      </p>
+    </header>
     <main>
-      <header>
-        <h1>Simple, traffic-based pricing</h1>
-        <p class="main-p">
-          Sign-up for our 30-day trial. No credit card required.
-        </p>
-      </header>
       <div id="card">
+        <p id="page-reviewvs">100K PAGEVIEWS</p>
         <div class="flex-group">
-          <span>100K PAGEVIEWS</span>
+          <div id="slider">
+            <input type="range" id="range" min="0" max="5" />
+            <div id="slider-circle">
+              <img
+                src="./images/icon-slider.svg"
+                alt="arrows pointing left and right" />
+            </div>
+          </div>
+
+          <p class="price">$16.00 <span>/ month</span></p>
+        </div>
+        <div class="billing">
+          <input type="checkbox" class="toggle" id="check" />
+          <label for="check">Monthly Billing</label>
         </div>
       </div>
     </main>
