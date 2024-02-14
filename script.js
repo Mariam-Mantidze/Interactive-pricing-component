@@ -14,4 +14,12 @@ const updateProgress = () => {
 
 range.addEventListener("input", updateProgress);
 
+range.addEventListener("mousedown", () => {
+  range.style.cursor = "grabbing";
+});
+
+range.addEventListener("mouseup", () => {
+  range.style.cursor = "pointer";
+});
+
 updateProgress();

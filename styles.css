@@ -76,6 +76,8 @@ main {
   background-color: #ecf0fb;
   border-radius: 20px;
   position: relative;
+  width: 279px;
+  margin-top: 41px;
 }
 
 #range::before {
@@ -99,6 +101,9 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+}
+#range::-webkit-slider-thumb:hover {
+  background-color: rgba(122, 234, 223, 1);
 }
 
 #range::-moz-slider-thumb {
@@ -131,13 +136,8 @@ main {
   align-items: center;
 }
 
-input[type="range"] {
-  width: 279px;
-  margin-top: 25px;
-}
-
 .price {
-  margin-top: 24px;
+  margin-top: 34px;
   font-size: 32px;
   font-weight: 800;
   line-height: 44px;
