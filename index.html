@@ -19,12 +19,12 @@
     <header>
       <h1>Simple, traffic-based pricing</h1>
       <p class="main-p">
-        Sign-up for our 30-day trial. No credit card required.
+        Sign-up for our 30-day trial. <br />No credit card required.
       </p>
     </header>
     <main>
       <div id="card">
-        <p id="page-reviewvs">100K PAGEVIEWS</p>
+        <p id="page-reviews">100K PAGEVIEWS</p>
         <div class="flex-group">
           <div id="slider">
             <input type="range" id="range" min="0" max="5" />
@@ -38,9 +38,13 @@
           <p class="price">$16.00 <span>/ month</span></p>
         </div>
         <div class="billing">
+          <label for="checkbox">Monthly Billing</label>
           <input type="checkbox" class="toggle" id="check" />
-          <label for="check">Monthly Billing</label>
+          <label for="checkbox" class="toggle">Yearly Billing</label>
+          <span id="billing-span">-25%</span>
         </div>
+
+        <div id="divider"></div>
       </div>
     </main>
   </body>
