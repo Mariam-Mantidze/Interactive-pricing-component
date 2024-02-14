@@ -8,6 +8,7 @@ font weight 600/90 */
 
 body {
   font-family: "Manrope", sans-serif;
+  min-height: 100vh;
 }
 
 header {
@@ -163,17 +164,9 @@ main {
 #billing-span {
   position: absolute;
   right: -47px;
-  top: -1px;
+  top: 2px;
 }
 
-label {
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 16px;
-  letter-spacing: 0px;
-  text-align: center;
-  color: #848ead;
-}
 #billing-span {
   font-size: 10px;
   font-weight: 800;
@@ -225,14 +218,27 @@ button {
   margin-top: 32px;
 }
 
-/* input[type="checkbox"].toggle {
-  opacity: 0;
+input[type="checkbox"].toggle {
   position: absolute;
-  left: -9000px;
-  top: -9000px;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
 }
 
-input[type="checkbox"].toggle + label {
+label {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #848ead;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label {
   position: relative;
   display: flex;
   align-items: center;
@@ -245,26 +251,35 @@ input[type="checkbox"].toggle + label::before {
   height: 22px;
   background: #cfd8ef;
   border-radius: 1em;
-  margin-right: 0.25em;
-  transition: background-color 200ms ease-in-out;
+  margin-right: 12px;
+  /* transition: background-color 200ms ease-in-out; */
 }
 
 input[type="checkbox"].toggle + label::after {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
   position: absolute;
   content: "";
-  font-size: 0.5em;
   width: 14px;
   height: 14px;
   left: 4px;
   background: #ffffff;
   border-radius: 50%;
-  transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+  /* transition: background-color 200ms ease-in-out, transform 200ms ease-in-out; */
+}
+
+.input[type="checkbox"].toggle:checked + label::after {
+  transform: translateX(
+    29px
+  ); /* Adjust this value based on the size of your switch */
 }
 
 input[type="checkbox"].toggle:checked + label::before {
+  background: #7aeadd; /* The new background color for the track */
+}
+
+/* input[type="checkbox"].toggle:checked + label::before {
   background: #7aeadf;
 }
 

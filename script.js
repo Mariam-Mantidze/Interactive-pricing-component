@@ -23,3 +23,11 @@ range.addEventListener("mouseup", () => {
 });
 
 updateProgress();
+
+const checkbox = document.getElementById("check");
+
+checkbox.addEventListener("change", function () {
+  if (checkbox.checked) {
+    checkbox.style.backgroundColor = rgba(122, 234, 223, 1);
+  }
+});
