@@ -3,3 +3,15 @@
 // - 100K pageviews / $16 per month
 // - 500k pageviews / $24 per month
 // - 1M pageviews / $36 per month
+
+const range = document.getElementById("range");
+
+const updateProgress = () => {
+  const percentage =
+    ((range.value - range.min) / (range.max - range.min)) * 100;
+  range.style.setProperty("--progress-width", `${percentage}%`);
+};
+
+range.addEventListener("input", updateProgress);
+
+updateProgress();
