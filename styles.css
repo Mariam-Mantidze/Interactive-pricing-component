@@ -61,13 +61,17 @@ main {
   align-items: center;
   padding: 34px 24px 32px 24px;
 }
-#page-reviews {
+#page-reviews,
+.page-review {
   font-size: 12px;
   font-weight: 800;
   line-height: 16px;
   letter-spacing: 1.7142857313156128px;
   text-align: center;
   color: #848ead;
+}
+.desktop-review {
+  display: none;
 }
 
 #range {
@@ -143,6 +147,9 @@ main {
   letter-spacing: -0.800000011920929px;
   text-align: right;
   color: #293356;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .price span {
   font-size: 14px;
@@ -162,11 +169,11 @@ main {
   margin-left: 20px;
   margin-right: -11px;
 }
-#billing-span {
+.discount {
   margin-left: -7px;
 }
 
-#billing-span {
+.discount {
   font-size: 10px;
   font-weight: 800;
   line-height: 14px;
@@ -176,6 +183,10 @@ main {
   background-color: #feede8;
   border-radius: 20px;
   padding: 2px 8px 3px 7px;
+}
+
+.discount-desktop {
+  display: none;
 }
 
 #divider {
@@ -214,6 +225,7 @@ li {
   color: #becdff;
   margin-top: 32px;
   cursor: pointer;
+  font-size: 12px;
 }
 
 .main-btn:hover {
@@ -277,8 +289,9 @@ input:checked + .btn::before {
   header {
     height: 449px;
     padding: 67px 0 0;
-    background-position: left 429px top 41px;
-    background-size: 120px;
+    background-position: left 424px top 29px;
+
+    /* background-size: 120px; */
   }
 
   h1 {
@@ -298,5 +311,76 @@ input:checked + .btn::before {
   #card {
     top: -317px;
     margin-top: 92px;
+    width: 540px;
+    padding: 40px 48px 32px;
+  }
+
+  .review-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #page-reviews {
+    display: none;
+  }
+  .price {
+    margin: 0;
+    font-size: 40px;
+    line-height: 54.64px;
+    letter-spacing: -1px;
+    gap: 8px;
+  }
+
+  .price span {
+    font-size: 16px;
+    line-height: 21.86px;
+  }
+
+  .desktop-review {
+    display: block;
+    font-size: 14px;
+    line-height: 19.12px;
+  }
+
+  .flex-group {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .discount-mobile {
+    display: none;
+  }
+  .discount-desktop {
+    display: flex;
+  }
+  #range {
+    width: 444px;
+  }
+  .billing {
+    gap: 16px;
+    margin-top: 59px;
+  }
+  .discount-desktop {
+    margin-left: -1px;
+  }
+  #divider {
+    width: 540px;
+  }
+
+  #last-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    align-items: flex-start;
+  }
+  .main-btn {
+    margin: 0;
+    padding: 12px 46px;
   }
 }

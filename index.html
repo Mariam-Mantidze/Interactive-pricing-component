@@ -24,13 +24,15 @@
     </header>
     <main>
       <div id="card">
-        <p id="page-reviews">100K PAGEVIEWS</p>
+        <p class="mobile-review" id="page-reviews">100K PAGEVIEWS</p>
         <div class="flex-group">
           <div id="slider">
             <input type="range" id="range" min="0" max="5" />
           </div>
-
-          <p class="price">$16.00 <span>/ month</span></p>
+          <div class="review-container">
+            <p class="desktop-review page-review">100K PAGEVIEWS</p>
+            <p class="price">$16.00 <span>/ month</span></p>
+          </div>
         </div>
         <div class="billing">
           <label class="toggle" for="checkbox">Monthly Billing</label>
@@ -41,26 +43,29 @@
 
           <label for="checkbox" class="toggle">Yearly Billing</label>
 
-          <span id="billing-span">-25%</span>
+          <span class="discount discount-mobile">-25%</span>
+          <span class="discount discount-desktop">-25% Discount</span>
         </div>
 
         <div id="divider"></div>
 
-        <ul>
-          <li>
-            <img src="./images/icon-check.svg" alt="checkmark" />Unlimited
-            websites
-          </li>
-          <li>
-            <img src="./images/icon-check.svg" alt="checkmark" />100% data
-            ownership
-          </li>
-          <li>
-            <img src="./images/icon-check.svg" alt="checkmark" />Email reports
-          </li>
-        </ul>
+        <div id="last-section">
+          <ul>
+            <li>
+              <img src="./images/icon-check.svg" alt="checkmark" />Unlimited
+              websites
+            </li>
+            <li>
+              <img src="./images/icon-check.svg" alt="checkmark" />100% data
+              ownership
+            </li>
+            <li>
+              <img src="./images/icon-check.svg" alt="checkmark" />Email reports
+            </li>
+          </ul>
 
-        <button class="main-btn">Start my trial</button>
+          <button class="main-btn">Start my trial</button>
+        </div>
       </div>
     </main>
   </body>
