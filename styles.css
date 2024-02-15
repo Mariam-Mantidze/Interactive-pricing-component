@@ -71,14 +71,13 @@ main {
 }
 
 #range {
-  /* -webkit-appearance: none; */
+  -webkit-appearance: none;
   all: unset;
   width: 279px;
   height: 8px;
   background-color: #ecf0fb;
   border-radius: 20px;
   position: relative;
-  width: 279px;
   margin-top: 41px;
 }
 
@@ -113,6 +112,7 @@ main {
 
 #range::-moz-slider-thumb {
   -webkit-appearance: none;
+  appearance: none;
   width: 40px;
   height: 40px;
   background: rgba(16, 216, 196, 1);
@@ -122,12 +122,6 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-/* #range::-webkit-slider-runnable-track {
-  background: rgba(164, 243, 235, 1);
-  height: 8px;
-  border-radius: 20px;
-} */
 
 #range::-moz-range-track {
   height: 8px;
@@ -180,8 +174,6 @@ main {
   text-align: center;
   color: #ff8d68;
   background-color: #feede8;
-  /* width: 41px;
-  height: 19px; */
   border-radius: 20px;
   padding: 2px 8px 3px 7px;
 }
@@ -221,6 +213,11 @@ li {
   background-color: #293356;
   color: #becdff;
   margin-top: 32px;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  color: rgba(255, 255, 255, 1);
 }
 
 .toggle {
@@ -249,7 +246,7 @@ li {
   position: relative;
   padding: 0;
   transition: 0.2s;
-  display: block;
+  /* display: block; */
   /* margin-right: 12px; */
 }
 
@@ -276,44 +273,30 @@ input:checked + .btn::before {
   display: none;
 }
 
-/* input[type="checkbox"] + label {
-  position: relative;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+@media (min-width: 900px) {
+  header {
+    height: 449px;
+    padding: 67px 0 0;
+    background-position: left 429px top 41px;
+    background-size: 120px;
+  }
+
+  h1 {
+    size: 28px;
+    line-height: 38.25px;
+  }
+
+  br {
+    display: none;
+  }
+
+  .main-p {
+    size: 15px;
+    line-height: 20.49px;
+  }
+
+  #card {
+    top: -317px;
+    margin-top: 92px;
+  }
 }
-
-input[type="checkbox"].toggle + label::before {
-  content: "";
-  width: 43px;
-  height: 22px;
-  background: #cfd8ef;
-  border-radius: 1em;
-  margin-right: 12px;
-}
-
-input[type="checkbox"].toggle + label::after {
- 
-  position: absolute;
-  content: "";
-
- 
-}
-.input[type="checkbox"]:checked + label::after {
-  transform: translateX(
-    50%
-  );
-}
-
-input[type="checkbox"].toggle:checked + label::before {
-  background: #7aeadd; 
-} */
-
-/* input[type="checkbox"].toggle:checked + label::before {
-  background: #7aeadf;
-}
-
-input[type="checkbox"].toggle:checked + label::after {
-  content: "";
-  transform: translateX(150%);
-} */

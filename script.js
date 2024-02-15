@@ -5,14 +5,16 @@
 // - 1M pageviews / $36 per month
 
 const range = document.getElementById("range");
+const thumb = document.querySelector("#range::-webkit-slider-thumb");
 
 const updateProgress = () => {
-  const percentage =
-    ((range.value - range.min) / (range.max - range.min)) * 100;
+  const percentage = (range.value / range.max) * 100;
   range.style.setProperty("--progress-width", `${percentage}%`);
 };
 
 range.addEventListener("input", updateProgress);
+
+//============ how to add style to thumb? =============== //
 
 range.addEventListener("mousedown", () => {
   range.style.cursor = "grabbing";
@@ -25,9 +27,3 @@ range.addEventListener("mouseup", () => {
 updateProgress();
 
 const checkbox = document.getElementById("check");
-
-// checkbox.addEventListener("change", function () {
-//   if (checkbox.checked) {
-//     checkbox.style.backgroundColor = rgba(122, 234, 223, 1);
-//   }
-// });
