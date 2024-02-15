@@ -61,17 +61,13 @@ main {
   align-items: center;
   padding: 34px 24px 32px 24px;
 }
-#page-reviews,
-.page-review {
+#page-reviews {
   font-size: 12px;
   font-weight: 800;
   line-height: 16px;
   letter-spacing: 1.7142857313156128px;
   text-align: center;
   color: #848ead;
-}
-.desktop-review {
-  display: none;
 }
 
 #range {
@@ -289,7 +285,7 @@ input:checked + .btn::before {
   header {
     height: 449px;
     padding: 67px 0 0;
-    background-position: left 424px top 29px;
+    background-position: center top 29px;
 
     /* background-size: 120px; */
   }
@@ -315,22 +311,21 @@ input:checked + .btn::before {
     padding: 40px 48px 32px;
   }
 
-  .review-container {
+  /* .review-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-  }
-  #page-reviews {
-    display: none;
-  }
+  } */
+
   .price {
     margin: 0;
     font-size: 40px;
     line-height: 54.64px;
     letter-spacing: -1px;
     gap: 8px;
+    margin-top: -40px;
   }
 
   .price span {
@@ -338,15 +333,16 @@ input:checked + .btn::before {
     line-height: 21.86px;
   }
 
-  .desktop-review {
-    display: block;
-    font-size: 14px;
-    line-height: 19.12px;
-  }
-
   .flex-group {
     width: 100%;
     flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  #page-reviews {
+    font-size: 14px;
+    margin-left: -290px;
+    margin-top: 18px;
   }
 
   .discount-mobile {
@@ -383,5 +379,6 @@ input:checked + .btn::before {
   .main-btn {
     margin: 0;
     padding: 12px 46px;
+    margin-top: 21px;
   }
 }
