@@ -361,6 +361,7 @@ input:checked + .btn::before {
   .billing {
     gap: 16px;
     margin-top: 59px;
+    margin-left: 57px;
   }
   .discount-desktop {
     margin-left: -1px;
