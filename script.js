@@ -1,6 +1,9 @@
 const range = document.getElementById("range");
-const thumb = document.querySelector("#range::-webkit-slider-thumb");
 
+// როგორ შევცვალოთ grabbing-ის დროს ჰოვერის სტილი რომ არ ხდებოდეს thumb-ზე?
+// const thumb = document.querySelector("#range::-webkit-slider-thumb");
+
+// function for updating range input's track based on it's progress
 const updateProgress = () => {
   const percentage =
     ((range.value - range.min) / (range.max - range.min)) * 100;
@@ -9,24 +12,23 @@ const updateProgress = () => {
 };
 
 range.addEventListener("input", updateProgress);
-updateProgress();
+updateProgress(); // რატომ გვჭირდება გამოძახება?
 
-// ==================
-
+// function for styling pointer on dragging
 range.addEventListener("mousedown", () => {
   range.style.cursor = "grabbing";
 });
-
+// function to go back to pointer when grabbing stops
 range.addEventListener("mouseup", () => {
-  range.style.cursor = "pointer";
+  range.style.cursor = "";
 });
 
-// ============
-
+// ============ updating pricing ==========
 const pageViews = document.getElementById("page-reviews");
 const monthlyPrice = document.getElementById("price");
 const checkbox = document.getElementById("check");
 
+// updating prices/views based on tracker's percentage
 const countPercentage = () => {
   const percentage =
     ((range.value - range.min) / (range.max - range.min)) * 100;
@@ -60,17 +62,7 @@ const countPercentage = () => {
   monthlyPrice.innerText = `$${price.toFixed(2)}`;
 };
 
-// checkbox.addEventListener("change", () => {
-//   if (checkbox.checked) {
-//     const text = monthlyPrice.innerHTML;
-//     let monthly = text.replace(/^\D*/, "");
-//     console.log(monthly);
-
-//     let yearlyDiscount = Math.floor(monthly - monthly / 4) * 12;
-//     monthlyPrice.innerText = yearlyDiscount;
-//   }
-// });
-
+// dynamically updating pricing on chechbox change
+checkbox.addEventListener("change", countPercentage);
+// dynamically updating pricing on range input
 range.addEventListener("input", countPercentage);
-
-countPercentage();

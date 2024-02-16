@@ -81,6 +81,10 @@ main {
   margin-top: 41px;
 }
 
+#range:hover {
+  cursor: pointer;
+}
+
 #range::before {
   content: "";
   position: absolute;
