@@ -105,7 +105,7 @@ main {
   background: rgba(16, 216, 196, 1);
   box-shadow: 0px 15px 30px 0px #00ffe799;
   border-radius: 50%;
-  background-image: url("/images/icon-slider.svg");
+  background-image: url("./images/icon-slider.svg");
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -122,7 +122,7 @@ main {
   background: rgba(16, 216, 196, 1);
   box-shadow: 0px 15px 30px 0px #00ffe799;
   border-radius: 50%;
-  background-image: url("/images/icon-slider.svg");
+  background-image: url("./images/icon-slider.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
