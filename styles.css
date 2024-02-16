@@ -123,31 +123,30 @@ main {
   background-position: center;
 }
 
-#range::-moz-range-track {
-  height: 8px;
-  background: rgba(164, 243, 235, 1);
-  border-radius: 20px;
-}
-
 .flex-group {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.price {
+.second-flex {
+  display: flex;
   margin-top: 34px;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 10px;
+}
+
+.price {
+  /* margin-top: 34px; */
   font-size: 32px;
   font-weight: 800;
   line-height: 44px;
   letter-spacing: -0.800000011920929px;
   text-align: right;
   color: #293356;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
-.price span {
+.price-span {
   font-size: 14px;
   font-weight: 600;
   line-height: 19px;
@@ -311,13 +310,13 @@ input:checked + .btn::before {
     padding: 40px 48px 32px;
   }
 
-  /* .review-container {
+  .second-flex {
     display: flex;
-    flex-direction: row;
+    margin-top: -40px;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  } */
+    /* justify-content: center; */
+    gap: 10px;
+  }
 
   .price {
     margin: 0;
@@ -325,10 +324,10 @@ input:checked + .btn::before {
     line-height: 54.64px;
     letter-spacing: -1px;
     gap: 8px;
-    margin-top: -40px;
+    /* margin-top: -40px; */
   }
 
-  .price span {
+  .price-span {
     font-size: 16px;
     line-height: 21.86px;
   }
